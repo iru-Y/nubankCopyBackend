@@ -7,16 +7,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class UserDto {
+public class UserDto implements Serializable {
+    private Long id;
     private String name;
     private String email;
-    private Double accountBalance;
+    private String accountBalance;
 
     public UserDto (User user){
+        id = user.getId();
         name = user.getName();
         email = user.getEmail();
         accountBalance = user.getAccountBalance();

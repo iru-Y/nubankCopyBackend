@@ -1,5 +1,6 @@
 package com.nubank.copy.domain.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,12 +20,17 @@ import java.io.Serializable;
 @Builder
 @Table(name = "USER_TABLE")
 public class User implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 50)
     private String name;
+    @Column(length = 60)
     private String password;
+    @Column(length = 50)
     private String email;
-    private Double accountBalance;
+    @Column(length = 18)
+    private String accountBalance;
 
 }

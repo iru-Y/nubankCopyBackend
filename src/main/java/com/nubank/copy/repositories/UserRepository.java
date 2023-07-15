@@ -1,4 +1,4 @@
-package com.nubank.copy.repository;
+package com.nubank.copy.repositories;
 
 import com.nubank.copy.domain.models.User;
 

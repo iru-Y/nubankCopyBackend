@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
-import com.nubank.copy.repository.UserRepository;
+import com.nubank.copy.repositories.UserRepository;
 
 import java.util.List;
 
